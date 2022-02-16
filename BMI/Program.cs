@@ -1,6 +1,5 @@
 ﻿void BMI()
 {
-M:
     Console.WriteLine("Hi,I can calculate your body mass index. Please enter your weight and height. Thanks ");
     Console.WriteLine("Please enter your weight(kilo)");
     double BMI;
@@ -17,7 +16,7 @@ M:
     else
     {
         Console.WriteLine("Please enter correct information");
-        goto M;
+       
     }
 }
 BMI();
