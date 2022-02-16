@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ogo", "ogo\ogo.csproj", "{5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMI", "BMI\BMI.csproj", "{74C39AFB-BA06-40E2-B7C3-AC2ACF1D8C39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array\Array.csproj", "{D64749B3-EE8F-4439-9CCD-2FFBAB52D622}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{74C39AFB-BA06-40E2-B7C3-AC2ACF1D8C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C39AFB-BA06-40E2-B7C3-AC2ACF1D8C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C39AFB-BA06-40E2-B7C3-AC2ACF1D8C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64749B3-EE8F-4439-9CCD-2FFBAB52D622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64749B3-EE8F-4439-9CCD-2FFBAB52D622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64749B3-EE8F-4439-9CCD-2FFBAB52D622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64749B3-EE8F-4439-9CCD-2FFBAB52D622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
