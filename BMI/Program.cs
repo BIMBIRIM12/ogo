@@ -14,8 +14,11 @@ namespace BMI
             double weight = double.Parse(Console.ReadLine());
             Console.WriteLine("Пожалуйста введи свой рост (м)");
             double height = double.Parse(Console.ReadLine());
-            double bmi =Result(weight, height);
-            string category = Category(bmi);
+            Program t = new Program();
+            double bmi=0;
+            string category = "";
+            Result( weight , height , ref  bmi);
+            Category(bmi, ref category);
             Console.WriteLine("Ваш рост: " + height + "\n Ваш вес: " + weight + "\n Ваш индекс масссы тела: " + bmi + "\n Ваш диагноз: " + category + "\n Хорошего дня! ");
 
             
@@ -24,20 +27,20 @@ namespace BMI
 
 
         }
-        static double Result (double weight, double height)
+        static void Result (  double weight,  double height, ref double bmi)
         {
             double w = weight;
             double h = height;
-            double bmi = w / Math.Pow(h, 2);
-            return bmi;
+             bmi = w / Math.Pow(h, 2);
+            
            
             
             
         }
-        static string Category (double bmi)
+        static void Category (double bmi, ref string category)
         {
             double b = bmi;
-            string category;
+             
             if (bmi <16)
             {
                 category = "Выраженный дефицит массы тела";
@@ -64,7 +67,7 @@ namespace BMI
                 category = "3-ая степень ожирения";
                 
             }
-            return category;
+            
            
         }
 
