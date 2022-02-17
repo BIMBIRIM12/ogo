@@ -1,23 +1,73 @@
-﻿void BMI()
+﻿using System;
+
+namespace BMI
 {
-    Console.WriteLine("Hi,I can calculate your body mass index. Please enter your weight and height. Thanks ");
-    Console.WriteLine("Please enter your weight(kilo)");
-    double BMI;
-    double weight = Convert.ToDouble(Console.ReadLine());
-    Console.WriteLine("Please enter your height(m)");
-    double height = Convert.ToDouble(Console.ReadLine());
-    if (weight > 0 && height > 0)
+    class Program
     {
-        height = height * height;
-        BMI = weight / height;
-        Console.WriteLine("Your BMI = " + BMI);
+        
+
+
+         static void Main()
+        {
+            Console.WriteLine("Привет, я могу посчитать индекс массы твоего тела и из этого сделать твой диагноз ");
+            Console.WriteLine("Пожалуйста введи свой вес (кг)");
+            double weight = double.Parse(Console.ReadLine());
+            Console.WriteLine("Пожалуйста введи свой рост (м)");
+            double height = double.Parse(Console.ReadLine());
+            double bmi =Result(weight, height);
+            string category = Category(bmi);
+            Console.WriteLine("Ваш рост: " + height + "\n Ваш вес: " + weight + "\n Ваш индекс масссы тела: " + bmi + "\n Ваш диагноз: " + category + "\n Хорошего дня! ");
+
+            
+           
+
+
+
+        }
+        static double Result (double weight, double height)
+        {
+            double w = weight;
+            double h = height;
+            double bmi = w / Math.Pow(h, 2);
+            return bmi;
+           
+            
+            
+        }
+        static string Category (double bmi)
+        {
+            double b = bmi;
+            string category;
+            if (bmi <16)
+            {
+                category = "Выраженный дефицит массы тела";
+            }
+            else if ( bmi >= 16 && bmi <= 18.5)
+            {
+                category = "Недостаточная масса тела";
+
+            }
+            else if (bmi >= 18.5 && bmi <= 25)
+            {
+                category = "Всё в норме";
+            }
+            else if (bmi >= 25 && bmi <=30)
+            {
+                category = "1-ая степень ожирения";
+            }
+            else if (bmi >=30 && bmi <=35)
+            {
+                category = "2-ая степень ожирения";
+            }
+            else 
+            {
+                category = "3-ая степень ожирения";
+                
+            }
+            return category;
+           
+        }
 
     }
-    else
-    {
-        Console.WriteLine("Please enter correct information");
-       
-    }
 }
-BMI();
 
