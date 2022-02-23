@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace Bmi
 {
+    /// <summary>
+    /// Вычисляет индекс массы тела человека и описание к нему.
+    /// </summary>
     public class BmiCalc
     {
+        /// <summary>
+        /// Вычисляет ИМТ по входным параметрам роста и веса.
+        /// </summary>
+        /// <param name="weight">принимаемый параметр веса</param>
+        /// <param name="height">принимаемый параметр роста</param>
+        /// <returns></returns>
+        
         public double Calculate(double weight, double height)
         {
             if (weight > 400 || weight < 10) 
@@ -22,7 +32,12 @@ namespace Bmi
             bmi = (weight * 10000 / Math.Pow(height, 2));
             return bmi;            
         }
-       
+
+       /// <summary>
+       /// Возвращет описание ИМТ по вычисленному значению.
+       /// </summary>
+       /// <param name="bmi">вычисленный ИМТ</param>
+       /// <returns>описание для человека</returns>
         public string GetDescription (double bmi)
         {      
            string description;
